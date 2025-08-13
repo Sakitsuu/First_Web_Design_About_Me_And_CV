@@ -37,8 +37,18 @@
             height: 150px;
             border-radius: 50%;
             border: 3px solid purple;
+            overflow: hidden; /* hide parts outside the circle */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: black; /* Placeholder background */
             margin-bottom: 10px;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* keeps proportions but fills circle */
         }
 
         .social-buttons {
@@ -101,7 +111,9 @@
     <div class="container">
         <!-- Left Side -->
         <div class="left-panel">
-            <div class="profile-pic"></div>
+            <div class="profile-pic">
+                <img src="IMG_4923.JPG" alt="Profile Picture">
+            </div>
             <h2>TRY Chansak</h2>
             <p>Telecommunication and Network engineering</p>
             <p>Web Developer</p>
