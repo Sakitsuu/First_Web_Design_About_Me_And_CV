@@ -10,17 +10,31 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: #111; /* Full background */
-            color: white;
             font-family: Arial, sans-serif;
+            color: white;
         }
 
         /* Full screen container */
         .container {
             display: flex;
             min-height: 100vh;
-        }
+            background: linear-gradient(270deg,
+                rgb(0, 0, 255),
+                rgb(255, 0, 0),
+                rgb(255, 255, 255),
+                rgb(255, 0, 0),
+                rgb(0, 0, 255)
+            );
+            background-size: 400% 400%;
+            animation: wave 8s ease-in-out infinite;
+            }
 
+
+        @keyframes wave {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         /* Left side */
         .left-panel {
             flex: 1;
@@ -28,8 +42,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #111;
-            border-right: 1px solid #222; /* Optional divider */
+            background-color: rgba(17,17,17,0.85); /* translucent overlay */
+            border-right: 1px solid #222;
         }
 
         .profile-pic {
@@ -80,7 +94,7 @@
             flex-direction: column;
             justify-content: center;
             padding: 40px;
-            background-color: #111; /* SAME as left panel */
+            background-color: rgba(17,17,17,0.85); /* translucent overlay */
         }
 
         .buttons {
@@ -107,7 +121,7 @@
     </style>
 </head>
 <body>
-
+    
     <div class="container">
         <!-- Left Side -->
         <div class="left-panel">
@@ -127,11 +141,28 @@
 
         <!-- Right Side -->
         <div class="right-panel">
-            <h1>HELLO!</h1>
+            <h1>WELCOME TO MY WEBSITE</h1>
             <p>Here's who I am & what I do</p>
+            <p>
+                My name is <strong>TRY Chansak</strong>, and I’m a 21-year-old from <strong>Kampot</strong> province. I’m currently a fourth-year student at the <strong>Institute of Technology of Cambodia (ITC)</strong>, majoring in <strong>Telecommunication and Network Engineering</strong>. 
+                I’m passionate about everything related to Technology and IT, and I’m always eager to learn new skills. My interests span Web Development, Programming, Networking Systems, and the Internet of Things (IoT). Through hands-on academic projects, 
+                I’ve gained practical experience in real-time communication systems and cloud integration
+            </p>
+            <p>
+                During my studies, I have worked on projects that strengthened my technical expertise and problem-solving abilities. At <strong>FABLAB (ITC)</strong>, I contributed to developing a <strong>Smart Home System</strong> with smoke detection, RFID-based door access, and a rain sensor. 
+                The system integrated cloud connectivity and sent real-time alerts via Telegram, enhancing my skills in IoT, cloud solutions, and real-time communication.
+            </p>
+            <p>
+                At <strong>DC-Lab (ITC)</strong>, I led the development of a <strong>Smart Plant Watering System</strong> that automatically irrigates plants based on soil moisture and temperature data, with live monitoring via a mobile application. 
+                This project deepened my expertise in embedded systems and mobile app development, while also improving my teamwork, communication, and research skills.
+            </p>
+            <p>
+                Outside of my academic work, <strong>Web Development</strong> is my hobby and self-taught passion. I enjoy building websites and web applications, and I constantly explore new technologies and frameworks to refine my skills. 
+                I have experience with <strong>HTML</strong>, <strong>Java</strong>, <strong>C</strong>, <strong>C++</strong>, <strong>Python</strong>, and <strong>Arduino</strong>.
+            </p>
             <div class="buttons">
-                <button class="btn btn-pink">RESUME / CV</button>
-                <button class="btn btn-dark">GIT HUB</button>
+                <button class="btn btn-pink" onclick="window.open('CV.pdf')">RESUME / CV</button>
+                <button class="btn btn-dark" onclick="window.open('https://github.com/Sakitsuu')">GIT HUB</button>
             </div>
             <p></p>
             <p></p>
